@@ -1,0 +1,109 @@
+import datetime
+import random
+
+attempts = 0
+Username = "1"
+Password = "2"
+while attempts < 5:     #loop for log In
+    attempts = attempts + 1
+    Username1 = input("username: ")
+    Password1 = input("password: ")
+    if Password == Password1 and Username == Username1:
+        from array import *
+
+        main = True
+        while main:     # loop if sell is done
+            print("Welcome User")
+            # kind soaps
+            soaps = ["dishwashing soap", "hand soap", "body soap", "laundry soap"]
+            # dishwashing
+            ds_brands = ["joy", "smart", "dazz", "axion"]
+            ds_price = [20, 30, 45, 35]
+            # hand soap
+            hs_brands = ["safeguard", "lysol", "palmolive", "soft soap"]
+            hs_price = [80, 110, 90, 100]
+            # body soap
+            bs_brands =["green cross", "silka", "dove", "lux", "belo", "myra"]
+            bs_price = [60, 30, 45, 80, 75, 60]
+            # laundry soap
+            ls_brands = ["tide", "ariel", "pride", "champion", "bleach", "surf", "perla", "bonux", "calla"]
+            ls_price = [14, 15, 14, 15, 17, 14, 20, 15, 12]
+
+            arr = array('i', [])  # store pieces
+            order_item = []  # store order items
+            order_prices = []  # store order prices
+            order_kind_soaps = []  # store order kind_soap
+            over_total = 0
+
+            next_item = True
+            while next_item:     # loop for adding more items
+                print("ITEMS \n1 - dishwashing soap \n2 - hand soap \n3 - body soap \n4 - laundry soap")
+                item = int(input(" what do you want to buy?: "))
+             if item == 1:   # dishwashing soap statement
+                   print("1 - joy \n2 - smart \n3 dazz \n4 axion")
+                   order = int(input("what is your order: "))
+                elif order == 1:
+                    order_item.append(ds_brands[4])
+                    order_prices.append(ds_price[4])
+                    how_many = int(input("how many? "))
+                    arr.append(how_many)
+                    total = how_many * (ds_price)
+                    over_total = total + over_total
+                    order_kind_soaps.append(soaps[0])
+                elif order == 1:
+                    order_item.append(ds_brands[0])
+                    order_prices.append(ds_price[0])
+                    how_many = int(input("how many?"))
+                    arr.append(how_many)
+                    total = how_many * (ds_price)
+                    over_total = over_total + total
+                    order_kind_soaps.append(soaps[0])
+                elif order == 2:
+                    order_item.append(ds_brands[1])
+                    order_prices.append(ds_price[1])
+                    how_many = int(input("how many?"))
+                    arr.append(how_many)
+                    total = how_many * (ds_price)
+                    over_total = over_total + total
+                    order_kind_soaps.append(soaps[0])
+                elif order == 3:
+                    order_item.append(ds_brands[2])
+                    order_prices.append(ds_price[2])
+                    how_many = int(input("how many?"))
+                    arr.append(how_many)
+                    total = how_many * (ds_price)
+                    over_total = over_total + total
+                    order_kind_soaps.append(soaps[0])
+                elif order == 4:
+                    order_item.append(hs_brands[3])
+                    order_prices.append(hs_price[3])
+                    how_many = int(input("how many?"))
+                    arr.append(how_many)
+                    total = how_many * (ds_price)
+                    over_total = over_total + total
+                    order_kind_soaps.append(soaps[0])
+                else:
+                    print("none in the store")
+             elif item == 2:
+                    print("1 - safeguard \n2 - lysol \n3 - palmolive \n4 - soft soap")
+                    order1 = int(input("what do you want to buy?: "))
+                if  order1 == 1:
+                    order_item.append(hs_brands[0])
+                    order_prices.append(hs_price[0])
+                    how_many = int(input("how many?"))
+                    arr.append(how_many)
+                    total = how_many * (hs_price)
+                    over_total = over_total + total
+                    order_kind_soaps.append(soaps[0])
+                elif order1 == 2:
+                    order_item.append(hs_brands[1])
+                    order_prices.append(hs_price[1])
+                    how_many = int(input("how many?"))
+                    arr.append(how_many)
+                    total = how_many * (hs_price)
+                    over_total = over_total + total
+                    order_kind_soaps.append(soaps[0])
+                elif order1 == 3:
+                    order_item.append(hs_brands[2])
+                    order_prices.append(hs_price[2])
+                    how_many = int(input("how many?"))
